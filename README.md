@@ -17,10 +17,11 @@ Next.js App Router demo for reserving warehouse inventory without overselling un
 npm install
 ```
 
-2. Create `.env` from `.env.example` and set a hosted Postgres URL:
+2. Create `.env` from `.env.example` and set your Postgres URLs:
 
 ```bash
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:5432/DATABASE?sslmode=require"
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:6543/DATABASE?sslmode=require&pgbouncer=true"
+DIRECT_URL="postgresql://USER:PASSWORD@HOST:5432/DATABASE?sslmode=require"
 RESERVATION_TTL_SECONDS="300"
 CRON_SECRET="replace-me"
 ```
